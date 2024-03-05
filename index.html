@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Smart Ticketing</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body class="w-4/5 mx-auto raleway-font">
+
+    <header class="w-4/5 mx-auto">
+
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-xl font-extrabold">P-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 font-medium">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn border-2 border-[#1DD100] bg-[#1DD1001A] text-[#1DD100] font-bold">Button <img
+                            src="images/bus-icon.png" alt=""></a>
+                </div>
+            </div>
+        </nav>
+
+        <section class="mx-auto mt-8">
+
+            <div
+                class="bg-[url('images/banner.png')] min-h-[600px] bg-contain bg-no-repeat flex items-center justify-center">
+
+                <div class="text-center space-y-8">
+
+                    <h1 class="text-white text-6xl font-extrabold leading-[80px]">
+                        End-to-End Travel with <br>
+                        <span class="text-[#1DD100]">P Paribahan</span>
+                    </h1>
+
+                    <p class="text-white">
+                        We live in a wonderful world that is full of beauty, charm and adventure. There is no end to
+                        <br> the adventures we can have if only we seek them with our eyes open.
+                    </p>
+
+                    <div>
+                        <a href="" class="btn bg-[#1DD100] text-black font-bold border-0">
+                            Buy Tickets
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="text-[40px] font-bold text-center mt-28 mb-10">Best offers for you</div>
+
+            <div class="flex justify-between flex-1">
+
+                <div class="flex gap-28 bg-[#FFBF0F] p-14 items-center rounded-3xl">
+
+                    <div>
+                        <h2 class="text-4xl font-extrabold">15% OFF</h2>
+                        <p class="text-xl font-bold">
+                            on your next purchase
+                        </p>
+                        <p class="font-light">use by January 2024</p>
+                    </div>
+                    <div>
+                        <h2 class="text-[32px] font-bold">NEW15</h2>
+                        <p>Coupon Code</p>
+                    </div>
+
+                </div>
+
+                <div class="flex gap-28 bg-[#F78C9C] p-14 items-center rounded-3xl">
+
+                    <div>
+                        <h2 class="text-4xl font-extrabold">20% OFF</h2>
+                        <p class="text-xl font-bold">
+                            on your next purchase
+                        </p>
+                        <p class="font-light">use by January 2024</p>
+                    </div>
+                    <div>
+                        <h2 class="text-[32px] font-bold">Couple 20</h2>
+                        <p>Coupon Code</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="text-center mt-16 mb-32">
+                <a href="" class="btn btn-outline btn-success font-bold">See All offers</a>
+            </div>
+
+
+
+        </section>
+
+    </header>
+
+    <main class=" bg-[#F7F8F8] rounded-t-[64px]">
+
+        <section>
+            <div>
+                <h1 class="text-[40px] font-bold text-center mt-28 mb-10">A.S Paribahan</h1>
+
+                <p class="text-center mb-20">
+                    We live in a wonderful world that is full of beauty, charm and adventure. There is no end to
+                    <br> the adventures we can have if only we seek them with our eyes open.
+                </p>
+            </div>
+        </section>
+
+        <section class="bg-white w-4/5 mx-auto rounded-3xl">
+
+            <div class="flex justify-around items-center p-9 ">
+
+                <div class="flex justify-between gap-60">
+
+                    <div class="flex gap-7">
+                        <div>
+                            <img src="images/bus-logo.png" alt="">
+
+                        </div>
+                        <div>
+                            <h3>Greenline Paribahan</h3>
+                            <p>Couch-009-WEB | AC_Business</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <a class="btn border-none border-[#1DD100] bg-[#1DD1001A] text-[#1DD100] font-bold">
+                            <img src="images/seat-green.png" alt="">
+                            <span id="seatCount">40</span> Seats left
+                        </a>
+                    </div>
+
+                </div>
+                <div class="">
+
+                    <div><img src="images/fare.png" alt=""></div>
+                    <div>
+                        <h2><span id="ticket-price">550</span> Taka</h2>
+                    </div>
+                    <div>
+                        <h4>Per Seat</h4>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <section class="bg-white w-4/5 mx-auto">
+
+            <div class="flex justify-between">
+
+                <div>
+                    <h4>Select Your Seat</h4>
+
+                    <div class="flex gap-16">
+
+                        <div class="grid grid-cols-2 gap-8">
+                            <button onclick="selectedSeat('A1')" id="A1" class="btn w-20">A1</button>
+                            <button onclick="selectedSeat('A2')" id="A2" class="btn w-20">A2</button>
+                            <button onclick="selectedSeat('B1')" id="B1" class="btn w-20">B1</button>
+                            <button onclick="selectedSeat('B2')" id="B2" class="btn w-20">B2</button>
+                            <button onclick="selectedSeat('C1')" id="C1" class="btn w-20">C1</button>
+                            <button onclick="selectedSeat('C2')" id="C2" class="btn w-20">C2</button>
+                            <button onclick="selectedSeat('D1')" id="D1" class="btn w-20">D1</button>
+                            <button onclick="selectedSeat('D2')" id="D2" class="btn w-20">D2</button>
+                            <button onclick="selectedSeat('E1')" id="E1" class="btn w-20">E1</button>
+                            <button onclick="selectedSeat('E2')" id="E2" class="btn w-20">E2</button>
+                            <button onclick="selectedSeat('F1')" id="F1" class="btn w-20">F1</button>
+                            <button onclick="selectedSeat('F2')" id="F2" class="btn w-20">F2</button>
+                            <button onclick="selectedSeat('G1')" id="G1" class="btn w-20">G1</button>
+                            <button onclick="selectedSeat('G2')" id="G2" class="btn w-20">G2</button>
+                            <button onclick="selectedSeat('H1')" id="H1" class="btn w-20">H1</button>
+                            <button onclick="selectedSeat('H2')" id="H2" class="btn w-20">H2</button>
+                            <button onclick="selectedSeat('I1')" id="I1" class="btn w-20">I1</button>
+                            <button onclick="selectedSeat('I2')" id="I2" class="btn w-20">I2</button>
+                            <button onclick="selectedSeat('J1')" id="J1" class="btn w-20">J1</button>
+                            <button onclick="selectedSeat('J2')" id="J2" class="btn w-20">J2</button>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-8">
+                            <button onclick="selectedSeat('A3')" id="A3" class="btn w-20">A3</button>
+                            <button onclick="selectedSeat('A4')" id="A4" class="btn w-20">A4</button>
+                            <button onclick="selectedSeat('B3')" id="B3" class="btn w-20">B3</button>
+                            <button onclick="selectedSeat('B4')" id="B4" class="btn w-20">B4</button>
+                            <button onclick="selectedSeat('C3')" id="C3" class="btn w-20">C3</button>
+                            <button onclick="selectedSeat('C4')" id="C4" class="btn w-20">C4</button>
+                            <button onclick="selectedSeat('D3')" id="D3" class="btn w-20">D3</button>
+                            <button onclick="selectedSeat('D4')" id="D4" class="btn w-20">D4</button>
+                            <button onclick="selectedSeat('E3')" id="E3" class="btn w-20">E3</button>
+                            <button onclick="selectedSeat('E4')" id="E4" class="btn w-20">E4</button>
+                            <button onclick="selectedSeat('F3')" id="F3" class="btn w-20">F3</button>
+                            <button onclick="selectedSeat('F4')" id="F4" class="btn w-20">F4</button>
+                            <button onclick="selectedSeat('G3')" id="G3" class="btn w-20">G3</button>
+                            <button onclick="selectedSeat('G4')" id="G4" class="btn w-20">G4</button>
+                            <button onclick="selectedSeat('H3')" id="H3" class="btn w-20">H3</button>
+                            <button onclick="selectedSeat('H4')" id="H4" class="btn w-20">H4</button>
+                            <button onclick="selectedSeat('I3')" id="I3" class="btn w-20">I3</button>
+                            <button onclick="selectedSeat('I4')" id="I4" class="btn w-20">I4</button>
+                            <button onclick="selectedSeat('J3')" id="J3" class="btn w-20">J3</button>
+                            <button onclick="selectedSeat('J4')" id="J4" class="btn w-20">J4</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="p-12">
+                    <h4>Select Your Seat</h4>
+
+                    <div class="bg-[#F7F8F8]">
+
+                        <div class="w-[440px] grid grid-cols-3">
+                            <div id="seat-booked">
+                                <div class="flex">
+                                    <h5>Seat</h5>
+                                    <div class="badge bg-[#1DD100] text-white"><span id="seat-badge">0</span></div>
+                                </div>
+
+                                
+                            </div>
+                            <div id="seat-class" class="mx-auto">
+                                <h5>Class</h5>
+                            </div>
+                            <div id="seat-price" class="text-end">
+                                <h5>Price</h5>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between">
+
+                            <h5>Total Price</h5>
+                            <h5>BDT <span id="total-cost">0</span></h5>
+
+                        </div>
+
+                        <div class="bg-white p-4">
+
+                            <input id="coupon-code" disabled type="text" placeholder="Have any coupon" class="input input-bordered input-md w-full max-w-xs" />
+                            <button id="coupon-btn" disabled onclick="applyCoupon()" style="width: 20%;" class="btn bg-[#1DD100] text-white">Apply</button>
+
+                        </div>
+
+                        <div class="flex justify-between">
+
+                            <h5>Grand Total</h5>
+                            <h5>BDT <span id="grand-total">0</span></h5>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+    <script src="scripts/utils.js"></script>
+
+</body>
+
+</html>

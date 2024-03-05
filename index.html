@@ -70,7 +70,7 @@
                     </p>
 
                     <div>
-                        <a href="" class="btn bg-[#1DD100] text-black font-bold border-0">
+                        <a href="#main-section" class="btn bg-[#1DD100] text-black font-bold border-0">
                             Buy Tickets
                         </a>
                     </div>
@@ -131,7 +131,7 @@
 
     </header>
 
-    <main class=" bg-[#F7F8F8] rounded-t-[64px]">
+    <main id="main-section" class="bg-[#F7F8F8] rounded-t-[64px] my-32 py-12">
 
         <section>
             <div>
@@ -196,25 +196,35 @@
 
                     <div class="flex gap-16">
 
-                        <div class="grid grid-cols-2 gap-8">
+                        <div class="grid grid-cols-3 gap-6 items-center">
+                            <p>A</p>
                             <button onclick="selectedSeat('A1')" id="A1" class="btn w-20">A1</button>
                             <button onclick="selectedSeat('A2')" id="A2" class="btn w-20">A2</button>
+                            <p>B</p>
                             <button onclick="selectedSeat('B1')" id="B1" class="btn w-20">B1</button>
                             <button onclick="selectedSeat('B2')" id="B2" class="btn w-20">B2</button>
+                            <p>C</p>
                             <button onclick="selectedSeat('C1')" id="C1" class="btn w-20">C1</button>
                             <button onclick="selectedSeat('C2')" id="C2" class="btn w-20">C2</button>
+                            <p>D</p>
                             <button onclick="selectedSeat('D1')" id="D1" class="btn w-20">D1</button>
                             <button onclick="selectedSeat('D2')" id="D2" class="btn w-20">D2</button>
+                            <p>E</p>
                             <button onclick="selectedSeat('E1')" id="E1" class="btn w-20">E1</button>
                             <button onclick="selectedSeat('E2')" id="E2" class="btn w-20">E2</button>
+                            <p>F</p>
                             <button onclick="selectedSeat('F1')" id="F1" class="btn w-20">F1</button>
                             <button onclick="selectedSeat('F2')" id="F2" class="btn w-20">F2</button>
+                            <p>G</p>
                             <button onclick="selectedSeat('G1')" id="G1" class="btn w-20">G1</button>
                             <button onclick="selectedSeat('G2')" id="G2" class="btn w-20">G2</button>
+                            <p>H</p>
                             <button onclick="selectedSeat('H1')" id="H1" class="btn w-20">H1</button>
                             <button onclick="selectedSeat('H2')" id="H2" class="btn w-20">H2</button>
+                            <p>I</p>
                             <button onclick="selectedSeat('I1')" id="I1" class="btn w-20">I1</button>
                             <button onclick="selectedSeat('I2')" id="I2" class="btn w-20">I2</button>
+                            <p>J</p>
                             <button onclick="selectedSeat('J1')" id="J1" class="btn w-20">J1</button>
                             <button onclick="selectedSeat('J2')" id="J2" class="btn w-20">J2</button>
                         </div>
@@ -257,7 +267,7 @@
                                     <div class="badge bg-[#1DD100] text-white"><span id="seat-badge">0</span></div>
                                 </div>
 
-                                
+
                             </div>
                             <div id="seat-class" class="mx-auto">
                                 <h5>Class</h5>
@@ -276,8 +286,10 @@
 
                         <div class="bg-white p-4">
 
-                            <input id="coupon-code" disabled type="text" placeholder="Have any coupon" class="input input-bordered input-md w-full max-w-xs" />
-                            <button id="coupon-btn" disabled onclick="applyCoupon()" style="width: 20%;" class="btn bg-[#1DD100] text-white">Apply</button>
+                            <input id="coupon-code" disabled type="text" placeholder="Have any coupon"
+                                class="input input-bordered input-md w-full max-w-xs" />
+                            <button id="coupon-btn" disabled onclick="applyCoupon()" style="width: 20%;"
+                                class="btn bg-[#1DD100] text-white">Apply</button>
 
                         </div>
 
@@ -294,26 +306,48 @@
                     <div class="space-y-5">
 
                         <h5>Passenger Name*</h5>
-                        <input type="text" placeholder="Enter your name" class="input input-bordered w-full" />
-        
+                        <input id="name" type="text" placeholder="Enter your name"
+                            class="input input-bordered w-full" />
+
                         <h5>Phone Number*</h5>
-                        <input type="text" placeholder="Enter your phone number" class="input input-bordered w-full" />
-        
+                        <input id="phone-number" type="text" placeholder="Enter your phone number"
+                            class="input input-bordered w-full" />
+
                         <h5>Email ID*</h5>
                         <input type="text" placeholder="Enter your email id" class="input input-bordered w-full" />
-        
-                        <button class="btn w-full disabled: bg-[#1DD100] text-white font-bold">Button</button>
-        
+
+                        <button id="next-btn" disabled class="btn w-full bg-[#1DD100] text-white font-bold" onclick="my_modal_4.showModal(), nextBtn()">Next</button>
+                        <dialog id="my_modal_4" class="modal text-center bg-gray-100">
+                            <div class="modal-box w-11/12 max-w-5xl py-40 space-y-6">
+                                <img src="images/success.png" class="mx-auto py-8" alt="">
+                                <h3 class="font-bold text-2xl text-[#1DD100]">SUCCESS</h3>
+                                <p class="py-4 font-bold">Thank you for Booking Our Bus Seats. <br>
+                                    We are working hard to find the best service and deals for you.
+                                </p>
+                                <p>
+                                    Shortly you will find a confirmation in your email.
+                                </p>
+
+
+                                <div class="modal-action flex justify-center">
+                                    <form method="dialog">
+                                        <!-- if there is a button, it will close the modal -->
+                                        <button id="continue" onclick="nextBtn()" class="btn btn-wide rounded-3xl bg-[#1DD100] text-white font-bold">Continue</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
+
                     </div>
 
                 </div>
 
-                
+
 
             </div>
 
 
-            
+
 
         </section>
 

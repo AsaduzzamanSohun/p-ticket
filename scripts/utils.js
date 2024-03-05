@@ -5,6 +5,7 @@ let ticketPrice = 550;
 let totalPrice = 0;
 let grandPrice = 0;
 let appliedCouponPrice = 0
+let green = '#1DD100';
 
 // ==========================================================================================
 
@@ -12,6 +13,14 @@ function selectedSeat(id) {
 
     const seatButton = document.getElementById(id);
     const couponCode = document.getElementById("coupon-code");
+
+
+    seatButton.addEventListener('keyup', function(e){
+        console.log(e.target.innerText);
+    })
+
+    console.log(seatButton.id);
+
 
     if (clickCount == 4) {
 
@@ -22,11 +31,29 @@ function selectedSeat(id) {
     }
 
 
-    seatButton.style.backgroundColor = '#1DD100';
+    seatButton.style.backgroundColor = green;
     seatButton.style.color = 'white';
+    
+
+    if (seatButton.style.backgroundColor === "#1DD100" && seatButton.id === seatButton.innerText) {
+        seatButton.setAttribute("disabled", "true");
+        return;
+    }
+
     clickCount++;
     seatCount(count);
     seatDetails(id);
+
+    seatButton.addEventListener("click", function (event) {
+
+        console.log('Key pressed:', event.key);
+        console.log('Target:', event.target);
+        console.log('Value:', event.target.value);
+        seatButtonId = seatButton.id;
+
+        console.log(seatButton.id)
+
+    })
 
 
     if (clickCount >= 4) {
@@ -37,7 +64,10 @@ function selectedSeat(id) {
         return;
     }
 
+    activateBtn();
+
 }
+
 
 
 // ==========================================================================================
@@ -79,7 +109,7 @@ function seatDetails(param) {
 
     let seatPriceStr = document.getElementById("seat-price");
     const p2 = document.createElement("p");
-    p2.innerText = '550';
+    p2.innerText = ticketPrice;
     seatPriceStr.appendChild(p2);
 
 
@@ -93,7 +123,18 @@ function seatDetails(param) {
     console.log(coupon)
 
 
-    grandCost(totalPrice)
+
+    const phoneNumber = document.getElementById("phone-number").value;
+
+    if (phoneNumber != "") {
+        nextBtn.removeAttribute('disabled', 'false');
+    }
+
+
+
+
+
+    grandCost(totalPrice);
 
 
 }
@@ -103,7 +144,7 @@ function seatDetails(param) {
 
 
 let total = 0
-function grandCost(param){
+function grandCost(param) {
 
     total = param;
     return total;
@@ -151,14 +192,55 @@ function applyCoupon() {
 
         return;
 
-    } else{
-        
+    } else {
+
         grandTotal.innerText = total;
         alert("Invalid Coupon");
         return;
     }
 
 }
+
+// ==========================================================================================
+
+
+function activateBtn() {
+
+    document.getElementById("phone-number").addEventListener("keyup", function () {
+
+        let nextBtn = document.getElementById("next-btn");
+
+        let phoneNumber = document.getElementById("phone-number").value;
+        console.log(phoneNumber)
+
+        if (clickCount >= 1 && phoneNumber !== "") {
+            nextBtn.removeAttribute('disabled')
+        }
+
+    })
+
+
+}
+
+
+function nextBtn() {
+
+    clickCount = 0;
+    count = 1;
+    badgeCount = 1;
+    ticketPrice = 550;
+    totalPrice = 0;
+    grandPrice = 0;
+    appliedCouponPrice = 0
+
+
+
+}
+
+
+
+
+
 
 
 

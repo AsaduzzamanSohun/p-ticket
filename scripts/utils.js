@@ -6,8 +6,7 @@ let totalPrice = 0;
 let grandPrice = 0;
 let appliedCouponPrice = 0
 
-
-
+// ==========================================================================================
 
 function selectedSeat(id) {
 
@@ -41,6 +40,9 @@ function selectedSeat(id) {
 }
 
 
+// ==========================================================================================
+
+
 function seatCount(param) {
 
     let totalSeatString = document.getElementById("seatCount").innerText;
@@ -49,6 +51,9 @@ function seatCount(param) {
     document.getElementById("seatCount").innerText = leftSeat;
 
 }
+
+
+// ==========================================================================================
 
 
 function seatDetails(param) {
@@ -93,6 +98,10 @@ function seatDetails(param) {
 
 }
 
+
+// ==========================================================================================
+
+
 let total = 0
 function grandCost(param){
 
@@ -102,6 +111,9 @@ function grandCost(param){
 }
 
 
+// ===========================================================================================
+
+
 const couponBtn = document.getElementById("coupon-btn");
 
 
@@ -109,18 +121,8 @@ function applyCoupon() {
 
     const couponCode = document.getElementById("coupon-code");
     let coupon = couponCode.value;
-
-
-
     let grandTotal = document.getElementById('grand-total');
-    grandPrice = total
-    // grandTotal.innerText = grandPrice;
-
-
-
-    console.log(ticketPrice)
-    console.log(grandPrice)
-
+    grandPrice = total;
 
 
     if (coupon == "NEW15") {
@@ -136,8 +138,7 @@ function applyCoupon() {
 
         return;
 
-    }
-    else if (coupon == "Couple 20") {
+    } else if (coupon == "Couple 20") {
 
         totalPrice = totalPrice + ticketPrice;
 
@@ -150,18 +151,12 @@ function applyCoupon() {
 
         return;
 
-    }
-
-    else{
+    } else{
         
         grandTotal.innerText = total;
         alert("Invalid Coupon");
         return;
     }
-
-
-
-
 
 }
 
